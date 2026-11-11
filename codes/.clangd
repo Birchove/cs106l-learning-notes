@@ -1,0 +1,13 @@
+# codes/.clangd
+
+CompileFlags:
+  # 移除已有的标准参数，确保不会与旧标准冲突。
+  Remove: ['-std=*']
+
+  # 为整个工作区中的 C++ 文件指定 C++23 和常用警告。
+  Add:
+    - '-std=c++23'
+    - '-Wall'
+    - '-Wextra'
+    - '-Wpedantic'
+    - '-Wshadow'
